@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: mq-map
 data:
-   {{ $files.Get "mqwebcontainer.xml" }}
+   {{ .Files.mqwebcontainer.xml }}
