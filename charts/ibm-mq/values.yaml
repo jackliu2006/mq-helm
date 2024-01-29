@@ -192,6 +192,6 @@ web:
   enabled:
   manualConfig:
     configMap:
-      name:
+      name: "mq-map"
     secret:
       name:
