@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: mq-map
-data:
-   mqwebcontainer.xml: |-
-     {{- .Files.Get "mqwebcontainer.xml" | nindent 8 }}

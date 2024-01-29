@@ -263,6 +263,10 @@ spec:
           - containerPort: 9414
           {{- end }}
           env:
+          - name: MQ_ADMIN_PASSWORD
+            value: "admin"
+          - name: MQ_APP_PASSWORD
+            value: "passw0rd"
           - name: LICENSE
             value: {{ .Values.license }}
           - name: MQ_QMGR_NAME
@@ -485,6 +489,10 @@ spec:
           command: ["runmqserver"]
           args: ["-i"]
           env:
+          - name: MQ_ADMIN_PASSWORD
+            value: "admin"
+          - name: MQ_APP_PASSWORD
+            value: "passw0rd"
           - name: LICENSE
             value: {{ .Values.license }}
           - name: MQ_QMGR_NAME
