@@ -3,8 +3,5 @@ kind: ConfigMap
 metadata:
   name: mq-map
 data:
-   {{- $files := .Files }}
-   {{- range tuple "mqwebcontainer.xml" }}
-   {{ . }}: >-
-      {{ $files.Get . }}
-   {{- end }}
+   mqwebcontainer.xml: |-
+    {{ .Files.Get "mqwebcontainer.xml" | indent 4}}
