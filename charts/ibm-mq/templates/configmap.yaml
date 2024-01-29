@@ -4,4 +4,4 @@ metadata:
   name: mq-map
 data:
    mqwebcontainer.xml: |-
-    {{ .Files.Get "mqwebcontainer.xml" | indent 4}}
+     {{- .Files.Get "mqwebcontainer.xml" | nindent 8 }}
