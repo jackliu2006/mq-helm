@@ -263,6 +263,8 @@ spec:
           - containerPort: 9414
           {{- end }}
           env:
+          - name: MQSNOAUT
+            value: "yes"
           - name: MQ_ADMIN_PASSWORD
             value: "admin"
           - name: MQ_APP_PASSWORD
@@ -489,6 +491,8 @@ spec:
           command: ["runmqserver"]
           args: ["-i"]
           env:
+          - name: MQSNOAUT
+            value: "yes"
           - name: MQ_ADMIN_PASSWORD
             value: "admin"
           - name: MQ_APP_PASSWORD
